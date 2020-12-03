@@ -1,4 +1,19 @@
-class Score {
+interface Scoreable {
+    readonly totalScore: number;
+    render(): void;
+}
+interface Foodable {
+    element: HTMLDivElement;
+    clickEventHandler(): void;
+}
+
+interface Foodsable {
+    elements: NodeListOf<HTMLDivElement>;
+    readonly activeElements: HTMLDivElement[];
+    readonly activeElementsScore: number[]
+}
+
+class Score implements Scoreable{
     private static instance: Score;
     get totalScore(){
         const foods = Foods.getInstance();
@@ -15,7 +30,7 @@ class Score {
         return Score.instance;
     }
 }
-class Food {
+class Food implements Foodable {
     constructor(public element: HTMLDivElement){
         element.addEventListener('click',this.clickEventHandler.bind(this));
     }
@@ -26,7 +41,7 @@ class Food {
         score.render();
     }
 }
-class Foods {
+class Foods implements Foodsable {
     private static instance: Foods; //static is Class using without  create instance
     elements = document.querySelectorAll<HTMLDivElement>('.food');
     private _activeElements: HTMLDivElement[] = [];
