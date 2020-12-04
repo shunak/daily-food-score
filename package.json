@@ -1,0 +1,25 @@
+{
+  "name": "daily-food-score",
+  "version": "1.0.0",
+  "description": "Now Editing...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shunak/daily-food-score.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shunak/daily-food-score/issues"
+  },
+  "homepage": "https://github.com/shunak/daily-food-score#readme",
+  "devDependencies": {
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
