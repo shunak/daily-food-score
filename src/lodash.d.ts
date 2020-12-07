@@ -1,6 +1,7 @@
 declare module 'lodash' {
     export function shuffle<T>(arr: T[]): T[]
 }
-declare const _: {
+interface Lodash {
     shuffle<T>(arr: T[]): T[]
 }
+declare const _: Lodash 
