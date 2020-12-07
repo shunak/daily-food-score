@@ -7,4 +7,5 @@ namespace myApp {
     const hello = 'hello in namespace';
     export const name = 'jhon';
 }
-const hello = 'hello';
+// const hello = 'hello';
+const hello = myApp.name;
